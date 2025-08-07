@@ -5,6 +5,8 @@ $very-light-grayish-cyan: hsl(180, 31%, 95%);
 $dark-grayish-cyan: hsl(180, 8%, 52%);
 $very-dark-grayish-cyan: hsl(180, 14%, 20%);
 
+$white: hsl(0, 0%, 100%);
+
 // Font weights
 
 $fw-semi-bold: 500;
@@ -29,7 +31,7 @@ body {
 }
 
 .filter {
-	background-color: white;
+	background-color: $white;
 	padding: 20px;
 	margin-top: -24px;
 	position: relative;
@@ -64,5 +66,103 @@ body {
 
 	.clear-filter-btn {
 		color: $dark-grayish-cyan;
+	}
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	margin-top: 56px;
+	margin-bottom: 24px;
+
+	.list-item {
+		background-color: $white;
+		padding: 24px;
+		border-radius: 4px;
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+		&.featured {
+			border-left: 6px solid $desaturated-dark-cyan;
+			padding: 20px 20px 20px 18px;
+		}
+
+		.logo {
+			width: 45px;
+			height: 45px;
+			margin-top: -42px;
+			margin-bottom: 16px;
+		}
+
+		.job-info {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			border-bottom: 1px solid $dark-grayish-cyan;
+			padding-bottom: 20px;
+
+			.job-header {
+				display: flex;
+				align-items: center;
+				gap: 24px;
+
+				.company-name {
+					color: $desaturated-dark-cyan;
+				}
+
+				.tags {
+					display: flex;
+					gap: 12px;
+					text-transform: uppercase;
+					color: $white;
+					font-weight: $fw-semi-bold;
+					font-size: 15px;
+
+					& > p {
+						padding: 6px 8px;
+						border-radius: 9999px;
+					}
+
+					.new-tag {
+						background-color: $desaturated-dark-cyan;
+					}
+
+					.featured-tag {
+						background-color: $very-dark-grayish-cyan;
+					}
+				}
+			}
+
+			.time-location-info {
+				display: flex;
+				gap: 24px;
+				color: $dark-grayish-cyan;
+				font-weight: $fw-semi-bold;
+
+				li {
+					list-style: disc;
+					color: $dark-grayish-cyan;
+
+					&:first-child::marker {
+						color: $white;
+					}
+				}
+			}
+		}
+
+		.job-requirements {
+			margin-top: 20px;
+			display: flex;
+			font-size: 17px;
+			gap: 16px;
+			flex-wrap: wrap;
+
+			.requirement-tag {
+				color: $desaturated-dark-cyan;
+				background-color: $light-grayish-cyan;
+				padding: 8px;
+				border-radius: 4px;
+			}
+		}
 	}
 }

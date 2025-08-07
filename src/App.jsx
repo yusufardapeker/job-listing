@@ -2,6 +2,7 @@ import "./styles/reset.css";
 import "./styles/style.scss";
 
 import { Filter } from "./components/filter";
+import { List } from "./components/list";
 
 import bgHeaderMobile from "./images/bg-header-mobile.svg";
 
@@ -12,6 +13,7 @@ function App() {
 
 			<div className="container">
 				<Filter />
+				<List />
 			</div>
 		</>
 	);
