@@ -4,8 +4,8 @@ import "./styles/style.scss";
 import { Filter } from "./components/filter";
 import { List } from "./components/list";
 
-import bgHeaderMobile from "./images/bg-header-mobile.svg";
-import bgHeaderDesktop from "./images/bg-header-desktop.svg";
+import bgHeaderMobile from "../public/images/bg-header-mobile.svg";
+import bgHeaderDesktop from "../public/images/bg-header-desktop.svg";
 
 function App() {
 	return (

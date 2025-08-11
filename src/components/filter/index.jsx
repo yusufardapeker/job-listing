@@ -1,6 +1,6 @@
 import React from "react";
 
-import iconRemove from "../../images/icon-remove.svg";
+import iconRemove from "../../../public/images/icon-remove.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { clearFilter, removeFilter } from "../../store/listSlice";
 
