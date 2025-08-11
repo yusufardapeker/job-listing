@@ -5,11 +5,15 @@ import { Filter } from "./components/filter";
 import { List } from "./components/list";
 
 import bgHeaderMobile from "./images/bg-header-mobile.svg";
+import bgHeaderDesktop from "./images/bg-header-desktop.svg";
 
 function App() {
 	return (
 		<>
-			<img src={bgHeaderMobile} alt="header background image" className="bg-header-img" />
+			<picture>
+				<source media="(min-width: 376px)" srcSet={bgHeaderDesktop} />
+				<img src={bgHeaderMobile} alt="header background image" className="bg-header-img" />
+			</picture>
 
 			<div className="container">
 				<Filter />
